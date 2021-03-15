@@ -1,0 +1,314 @@
+/*@import url('https://fonts.googleapis.com/css?family=Raleway');*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  background-color: lightgray;
+  grid-template-columns: 33% 22% 45%;
+  grid-template-rows: 0.3fr 0.8fr 0.7fr 1.1fr 0.1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+  "myName myName myName"
+  "contact workExperience workExperience"
+  "contact education education"
+  "contact skill skill"
+  "contact interests interests";
+}
+
+.myName { 
+  background-color: rgb(31,34,43);
+  grid-area: myName; 
+  align-content: center;
+  position: relative;
+}
+
+.myName .header{
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.myName .header img{
+  background-color: lightgray;
+  width: 200px;
+  height: 220px;
+  border-radius:50%;
+  display: flex;
+  position: absolute;
+  top: 10px;
+  left: 150px;
+  border: 2px solid white;
+}
+
+.myName .header-text{
+  padding-top: 10 px;
+  color: white;
+  width: 60%;
+  margin-left: auto;
+}
+
+.myName .header-text h1{
+  padding-top: 5px;
+  
+  top: 20 px;
+  font-size: 80px;
+  font-weight: normal;
+}
+
+.myName .header-text p{
+  font-size: 20px;
+  color: lightgray;
+}
+
+.freeSpace{
+  background-color: snow;
+  grid-area: freeSpace;
+}
+
+.photo { 
+  background: lightgray;
+  grid-area: photo; 
+}
+
+.contact { 
+  background: lightgray;
+  text-align: center;
+  margin-top: 150px;
+  padding: 0 30px;
+  grid-area: contact; 
+}
+
+.contact h5{
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.contact p{
+  font-size: 17px;
+}
+
+
+.workExperience { 
+  padding-top: 50px;
+  
+  background-color: snow;
+  grid-area: workExperience; 
+}
+
+.workExperience h1{
+  padding-top: 10px;
+  padding-left: 69px;
+  font-size: 35px;
+  font-weight: normal;
+}
+
+.workExperience h1 span{
+  margin-right: 30px;
+  font-size: 50px;
+  color: lightgray;
+}
+
+.workExperience p{
+  padding-left: 70px;
+  text-align: justify;
+  word-break: break-all;
+  font-size: 17px;
+  color: gray;
+  margin-top: 10px;
+}
+.job{
+  margin: 20px 0;
+}
+
+.workExperience .job{
+  position: relative;
+}
+
+.job h3{
+  font-size: 22px;
+  font-weight: normal;
+  padding-left: 70px;
+}
+
+.job h4{
+  font-size: 18px;
+  padding-left: 70px;
+  font-weight: normal;
+  color: gray;
+}
+
+.job span{
+  position: absolute;
+  top: 10px;
+  right: 70px;
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+
+
+.education { 
+  background-color: snow;
+  grid-area: education; 
+}
+
+
+.education h1{
+  padding-left: 69px;
+  font-size: 35px;
+  font-weight: normal;
+}
+
+.education h1 span{
+  margin-right: 30px;
+  font-size: 50px;
+  color: lightgray;
+}
+
+.education p{
+  padding-left: 70px;
+  text-align: justify;
+  word-break: break-all;
+  font-size: 17px;
+  color: gray;
+  margin-top: 10px;
+}
+.school{
+  margin: 20px 0;
+}
+
+.education .school{
+  position: relative;
+}
+
+.school h3{
+  font-size: 22px;
+  font-weight: normal;
+  padding-left: 70px;
+}
+
+.school h4{
+  font-size: 18px;
+  padding-left: 70px;
+  font-weight: normal;
+  color: gray;
+}
+
+.school span{
+  position: absolute;
+  top: 10px;
+  right: 70px;
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.skill { 
+  padding-top: 50px;
+  background-color: snow;
+  grid-area: skill; 
+}
+
+.skill h1{
+  padding-top: 10px;
+  padding-left: 69px;
+  font-size: 35px;
+  font-weight: normal;
+}
+
+
+.skill h1 span{
+  margin-right: 30px;
+  font-size: 50px;
+  color: lightgray;
+}
+
+
+.skill p{
+  padding-left: 70px;
+  text-align: justify;
+  word-break: break-all;
+  font-size: 17px;
+  color: gray;
+  margin-top: 10px;
+}
+
+.skill .languages{
+  padding-top: 20px;
+}
+
+.skill .languages h2{
+  font-size: 35px;
+  font-weight: normal;
+  color: lightgray;
+  padding-left: 70px;
+}
+
+.skill .languages p{
+  padding-left: 70px;
+  text-align: justify;
+  word-break: break-all;
+  font-size: 17px;
+  color: black;
+  margin-top: 10px;
+}
+
+.interests { 
+  padding-bottom: 30px;
+  background-color: snow;
+  grid-area: interests; 
+}
+
+.flex-container {
+  
+  display: flex;
+  padding-left: 20px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: normal;
+  align-items: normal;
+  align-content: center;
+}
+
+
+.interests h1{
+  padding-top: 50px;
+  padding-left: 69px;
+  font-size: 40px;
+  font-weight: normal;
+}
+
+
+.interests h1 span{
+  padding-right: 30px;
+  font-size: 50px;
+  color: lightgray;
+}
+
+
+.flex-items{
+  width:500px;
+  
+  margin:10px;
+  border: 3px solid gray;
+  background-color:rgba(49, 49, 49, 0.966);
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  font-size: 20px;
+  flex-basis: auto;
+  align-self: auto;
+  text-align: center;
+  color: snow;
+  order: 0;
+}

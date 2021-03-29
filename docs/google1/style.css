@@ -1,0 +1,223 @@
+html{
+    height: 100%;
+    min-height: 100%;
+}
+
+#navbar{
+    display: grid;
+    grid-template-columns: 150px 1fr 45px 168px;
+    grid-template-rows: 65px;
+    grid-template-areas: 
+    "logo search menu1 przyciskZaloguj";
+}
+
+a{
+    text-decoration: none;
+    color:#5f6368;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    padding-right: 12px;
+    padding-left: 10;
+}
+
+#logo{
+    grid-area: logo;
+    justify-self: flex-start;
+    align-self: center;
+    padding-left: 15.5px;
+    padding-right: 28px;
+    padding-top: 6px;
+}
+#search{
+    grid-area: search;
+    border-radius: 30px;
+    justify-self: flex-start;
+    align-self: center;
+    background: #fff;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    height: 39px;
+    width: 689px;
+    border-radius: 24px;
+    z-index: 3; 
+}
+#menu1{
+    grid-area: menu1;
+    justify-self: flex-end;
+    align-self: center;
+}
+#przyciskZaloguj{
+    grid-area: przyciskZaloguj;
+    justify-self: flex-end;
+    align-self: center;
+
+
+    /**/
+
+    font: 13px/27px Roboto,RobotoDraft,Arial,sans-serif;
+    white-space: nowrap;
+    display: inline-block;
+    outline: none;
+    font-family: Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding-top: 10px;
+    letter-spacing: .25px;
+    line-height: 16px;
+    margin-right: 36px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: #1a73e8;
+    border: 1px solid transparent;
+    margin-left: 2px;
+    padding: 9px 15px;
+    min-width: 118.46px;
+    min-height: 36;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+
+
+
+}
+
+#navbar2{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 160px 98.61px 113.8px 84.91px 79.85px 74.8px 73.01px 85.59px 82.54px auto;
+    grid-template-rows: 58px;
+    grid-template-areas: 
+    ". wszystko wiadomosci grafika video mapy wiecej ustawienia narzedzia .";
+    border-bottom: 1px solid #ebebeb;
+}
+
+#wszystko {
+    grid-area: wszystko;
+    justify-self: center;
+    align-self: flex-end;
+    padding-bottom: 15px;
+}
+
+#wiadomosci {
+    grid-area: wiadomosci;
+    justify-self: center;
+    align-self: flex-end;
+    padding-bottom: 15px;
+}
+#grafika{
+    grid-area: grafika;
+    justify-self: center;
+    align-self: flex-end;
+    padding-bottom: 15px;
+}
+
+#video{
+    grid-area: video;
+    justify-self: center;
+    align-self: flex-end;
+    padding-bottom: 15px;
+}
+#mapy{
+    grid-area: mapy;
+    justify-self: center;
+    align-self: flex-end;
+    padding-bottom: 15px;
+}
+#wiecej{
+    grid-area: wiecej;
+    justify-self: center;
+    align-self: flex-end;
+    padding-bottom: 15px;
+}
+#ustawienia{
+    grid-area: ustawienia;
+    justify-self: center;
+    align-self: flex-end;
+    padding-bottom: 15px;
+}
+#narzedzia{
+    grid-area: narzedzia;
+    justify-self: center;
+    align-self: flex-end;
+    padding-bottom: 15px;
+}
+
+#main{
+    display: grid;
+    width: 100%;
+    
+    grid-template-columns: 160px 652px auto;
+    grid-template-rows: 600px;
+    grid-template-areas: 
+    ". text";
+}
+#wyniki{
+    grid-area: text;
+}
+#text{
+    grid-area: text;
+}
+
+#footer1{
+    background-color: #f2f2f2;
+    display: grid;
+    width: 100%;
+    grid-template-rows: 41px;
+    grid-template-columns: 160px auto;
+    grid-template-areas: 
+    ". polska";
+    border-bottom: 1px solid #dadce0;
+    border-top: 1px solid #dadce0;
+    width: 100%;
+}
+
+#polska{
+    grid-area: polska;
+    text-decoration: none;
+    color:#5f6368;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    padding-right: 12px;
+    padding-left: 10;
+    align-self: center;
+}
+
+
+#footer2{
+    display: grid;
+    background-color: #f2f2f2;
+    width: 100%;
+    grid-template-columns: 160px 70.58px 113.38px 99.36px 77.84px;
+    grid-template-rows: 58px;
+    grid-template-areas: 
+    ". pomoc przeslijOpinie prywatnosc warunki";
+    border-bottom: 1px solid #dadce0;
+    position: absolute;
+    width: 100%;
+}
+
+#pomoc{
+    grid-area: pomoc;
+    justify-self: flex-start;
+    align-self: center;
+}
+#przeslijOpinie{
+    grid-area: przeslijOpinie;
+    justify-self: center;
+    align-self: center;
+}
+#prywatnosc{
+    grid-area: prywatnosc;
+    justify-self: center;
+    align-self: center;
+}
+#warunki{
+    grid-area: warunki;
+    justify-self: center;
+    align-self: center;
+}
+
+
+

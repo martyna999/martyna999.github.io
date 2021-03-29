@@ -81,6 +81,8 @@
     vertical-align: middle;
     padding-right: 15px;
   }
+
+  
   
   .logowanie .ramka1 .menu{
     font: 13px/27px Roboto,RobotoDraft,Arial,sans-serif;
@@ -251,9 +253,11 @@
     margin-right: 20px;
     white-space: nowrap;
     color: #70757a;
+    
   }
   .napis1 .span{
     margin-right: 20px;
+    break-after: 20px;
   }
   
   .napis2 { 
@@ -276,6 +280,8 @@
     text-decoration: none;
     padding: 15px;
     color: #70757a;
+    justify-self: center;
+    text-align: center;
   }
 
 

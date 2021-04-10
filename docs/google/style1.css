@@ -5,6 +5,7 @@ html{
 
 #navbar{
     display: grid;
+    position: relative;
     grid-template-columns: 150px 1fr 45px 168px;
     grid-template-rows: 65px;
     grid-template-areas: 
@@ -14,7 +15,7 @@ html{
 a{
     text-decoration: none;
     color:#5f6368;
-    font-size: 13px;
+    font-size: 14px;
     font-family: Arial, sans-serif;
     padding-right: 12px;
     padding-left: 10;
@@ -23,24 +24,66 @@ a{
 #logo{
     grid-area: logo;
     justify-self: flex-start;
-    align-self: center;
     padding-left: 15.5px;
     padding-right: 28px;
-    padding-top: 6px;
+    padding-top: 27px;
 }
+
+#okno{
+    position: relative;
+    padding-top: 18px;
+    margin: 0;
+}
+
 #search{
-    grid-area: search;
+    grid-area:search;
+    padding-left: 20px;
+    height: 39px;
+    width: 689px;
+    margin: 0px;
     border-radius: 30px;
     justify-self: flex-start;
     align-self: center;
     background: #fff;
-    border: 1px solid #dfe1e5;
+    border: 1px solid transparent;
     box-shadow: none;
-    height: 39px;
-    width: 689px;
     border-radius: 24px;
-    z-index: 3; 
+    box-shadow: 0 2px 5px 1px rgba(64,60,67,.16); 
 }
+
+#X-icon{
+    position: absolute;
+    top: 26px;
+    left: 529px;
+    width: 34px;
+    height: 30px;
+}
+
+#klawia-icon{
+    position: absolute;
+    top: 33px;
+    left: 574px;
+    width: 23px;
+    height: 15px;
+}
+
+#micro-icon{
+    position: absolute;
+    top: 31px;
+    left: 620px;
+    width: 14px;
+    height: 20px;
+}
+
+#lupa-icon{
+    position: absolute;
+    top: 32px;
+    left: 656px;
+    width: 24px;
+    height: 17.49px;
+}
+
+
 #menu1{
     grid-area: menu1;
     justify-self: flex-end;
@@ -98,6 +141,7 @@ a{
     justify-self: center;
     align-self: flex-end;
     padding-bottom: 15px;
+    color: #5f6368;
 }
 
 #wiadomosci {
@@ -147,18 +191,14 @@ a{
 #main{
     display: grid;
     width: 100%;
-    
     grid-template-columns: 160px 652px auto;
     grid-template-rows: 600px;
     grid-template-areas: 
     ". text";
 }
-#wyniki{
-    grid-area: text;
-}
-#text{
-    grid-area: text;
-}
+
+
+
 
 #footer1{
     background-color: #f2f2f2;

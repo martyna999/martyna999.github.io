@@ -1,0 +1,30 @@
+#Lista{
+    grid-area: text;
+}
+
+#wyniki{
+    overflow: hidden;
+    color: #70757A;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Google Sans,arial,sans-serif;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+#wyszukaneRzeczy{
+    
+    color: #1a0dab;
+    font-size: 20px;
+    font-family: Google Sans, arial, sans-serif;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,.10);
+}
+
+#pod{
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    color: #4d5156;
+}

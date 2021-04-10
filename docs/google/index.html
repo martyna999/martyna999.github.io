@@ -7,19 +7,23 @@
 <title>jakiś wynik google</title>
 <link rel="icon" href="smallLogo.png">
 <link rel="stylesheet" type="text/css" href="style1.css">
+<link rel="stylesheet" type="text/css" href="text.css">
     </head>
     <body>
         <div id="navbar">
             <a href = "#" id="logo"><img src="googleLogo.png" height="31px" width="92px"></a>
-            <input type="text" id="search" height="44px">
-            <label for="search"><img src="X.png" height ="24px" width="40px" ></label>
-            <label for="search"><img src="klawia.png" height ="24px" width="24px"></label>
-            <label for="search"><img src="micro.png" height ="24px" width="24px"></label>
-            <label for="search"><img src="lupa.png" height ="24px" width="24px"></label>
+        <div id="okno">
+            <img src="X.png" id="X-icon">
+            <input type="text" id="search" value height="45px">
+            <img src="klawia.png" id="klawia-icon">
+            <img src="micro.png" id="micro-icon">
+            <img src="lupa.png" id="lupa-icon">
+        </div>
             <a href = "#" id="menu1"><img src="menu.png" height="17px" width="17px"></a>
             <a href = "#" id="przyciskZaloguj">Zaloguj się</a>
         </div>
         <div id="navbar2">
+           
             <a href = "#" id="wszystko"><img src="lupa.png" height="14px" width="22px">Wszystko</a>
             <a href = "#" id="wiadomosci"><img src="wiadomosci.png" height="14px" width="22px">Wiadomości</a>
             <a href = "#" id="grafika"><img src="grafika.png" height="14px" width="22px">Grafika</a>
@@ -30,8 +34,39 @@
             <a href = "#" id="narzedzia">Narzędzia</a>
         </div>
         <div id="main">
-            <p id="wyniki">Około 14 200 000 wyników (0,36s)</p>
-            <p id="text"></p>
+            <div id="Lista">
+                <p id="wyniki">Około 14 700 000 wyników (0,36s)</p>
+
+                <ul id="wyszukaneRzeczy" style="list-style-type:none">
+                    <li>
+                        Sprawdzanie wyników wyszukiwania podróży przez Gmaila ...
+                        <p id="pod">
+                            Zobacz wyniki z innego konta Google. Uwaga: aby wykonać te czynności, muszisz zalogować
+                        </p>
+                        <p id="pod">sie na konto Google. Na telefonie lub tablecie z Androidem otwórz ...</p>
+                    </li>
+
+                    <li>
+                        Zawężanie wyników wyszukiwania - Wyszukiwarka Google ...
+                        <p id="pod">
+                            Możesz zwiększyć precyzję wyników wyszukiwania, używając w zapytaniu słów i symboli
+                        </p>
+                        <p id="pod">Wyszukiwarka Google zwykle ignoruje znaki interpunkcyjne, które nie ...</p>
+                    </li>
+
+                    <li>
+                        Rodzaje wyników wyszukiwania Google - ponad 20 ...
+                    </li>
+
+                    <li>
+                        14 sposobów wyszukiwania w Google, których 95% z Was nie ...
+                    </li>
+
+                    <li>
+                        Wyniki wyszukiwań Google - skąd takie rozbieżności?
+                    </li>
+                </ul>
+            </div>
         </div>
         <div id="footer1">
             <p id="polska">Polska</p>

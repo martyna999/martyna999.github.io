@@ -35,7 +35,7 @@ a{
     margin: 0;
 }
 
-#search{
+#googleSearch{
     grid-area:search;
     padding-left: 20px;
     height: 39px;
@@ -49,6 +49,10 @@ a{
     box-shadow: none;
     border-radius: 24px;
     box-shadow: 0 2px 5px 1px rgba(64,60,67,.16); 
+}
+
+#result{
+    color: red;
 }
 
 #X-icon{

@@ -8,13 +8,18 @@
 <link rel="icon" href="smallLogo.png">
 <link rel="stylesheet" type="text/css" href="style1.css">
 <link rel="stylesheet" type="text/css" href="text.css">
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     </head>
     <body>
         <div id="navbar">
             <a href = "#" id="logo"><img src="googleLogo.png" height="31px" width="92px"></a>
         <div id="okno">
             <img src="X.png" id="X-icon">
-            <input type="text" id="search" value height="45px">
+            <div id="app">
+                
+                <input type="text" id="googleSearch" v-model="googleSearch" v-bind:class="{results: googleSearch}" value height="45px">
+                {{googleSearch}}
+            </div>
             <img src="klawia.png" id="klawia-icon">
             <img src="micro.png" id="micro-icon">
             <img src="lupa.png" id="lupa-icon">
@@ -77,5 +82,16 @@
             <a href = "#" id="prywatnosc">Prywatność</a>
             <a href = "#" id="warunki">Warunki</a>
         </div>
+
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    googleSearch:'',
+                    puste:'',
+                }
+            })
+        </script>
+
     </body>
 </html>

@@ -2,24 +2,30 @@
 <html>
     <head>
         <meta name="viewport" contetn="width=device-width, initial-scale-1.0">
-<meta charset="UTF-8">
-<html lang="pl-PL"></html>
-<title>jakiś wynik google</title>
-<link rel="icon" href="smallLogo.png">
-<link rel="stylesheet" type="text/css" href="style1.css">
-<link rel="stylesheet" type="text/css" href="text.css">
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <meta charset="UTF-8">
+        <html lang="pl-PL"></html>
+        <title>jakiś wynik google</title>
+        <link rel="icon" href="smallLogo.png">
+        <link rel="stylesheet" type="text/css" href="style1.css">
+        <link rel="stylesheet" type="text/css" href="text.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <script src="http://unpkg.com/vue"></script>
+        <script src="cities.js"></script>
     </head>
     <body>
         <div id="navbar">
             <a href = "#" id="logo"><img src="googleLogo.png" height="31px" width="92px"></a>
         <div id="okno">
             <img src="X.png" id="X-icon">
-            <div id="app">
-                
+            
+            <div id="app">  
                 <input type="text" id="googleSearch" v-model="googleSearch" v-bind:class="{results: googleSearch}" value height="45px">
-                {{googleSearch}}
+                <div class="city" v-for="city in filteredCities">
+                    {{ city.name }}
+                </div>
+                {{ message }}
             </div>
+ 
             <img src="klawia.png" id="klawia-icon">
             <img src="micro.png" id="micro-icon">
             <img src="lupa.png" id="lupa-icon">
@@ -87,11 +93,23 @@
             new Vue({
                 el: '#app',
                 data: {
-                    googleSearch:'',
-                    puste:'',
+                    cities: window.cities,
+                    googleSearch:"",
+                },
+                computed: {
+                    filteredCities() {
+                        return this.cities
+                            .filter((city) => {
+                                return city.name.toLowerCase().includes(this.googleSearch);
+                        })
+                        .slice(0, 10);    
+                    }
                 }
             })
         </script>
-
     </body>
 </html>
+
+
+
+

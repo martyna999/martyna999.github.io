@@ -1,0 +1,353 @@
+/*@import url('https://fonts.googleapis.com/css?family=Raleway');*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: sans-serif;
+  }
+  
+  .body{
+    background: #f2f2f2;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 14px;
+    font-family: arial,sans-serif;
+    color: #222;
+    min-width: 400px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 438.23px 1fr 281.69px;
+    grid-template-rows: 60px 194.4px 403.5px 48.6px 48px;
+    gap: 0px 0px;
+    grid-template-areas:
+      "logowanie logowanie logowanie"
+      "Logo Logo Logo"
+      "wyszukiwarka wyszukiwarka wyszukiwarka"
+      "polska polska polska"
+      "napis1 napis2 napis3";
+  }
+  .logowanie { 
+    grid-area: logowanie; 
+    background: #fff;
+    height: 60px;
+    padding: 6px;}
+
+  .logowanie .ramka1{
+    color: black;
+    font: 13px/27px Roboto,RobotoDraft,Arial,sans-serif;
+    vertical-align: middle;
+    white-space: nowrap;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    box-sizing: border-box;
+    height: 48px;
+    line-height: normal;
+    padding: 0 4px;
+    flex: 0 0 auto;
+    justify-content: flex-end;
+    float: right;
+    padding-left: 0;
+  }
+  
+  .logowanie .ramka1 .gmail{
+    font: 13px/27px Roboto,RobotoDraft,Arial,sans-serif;
+    white-space: nowrap;
+    font-family: arial,sans-serif;
+    color: rgba(0, 0, 0, 0.87);
+    text-decoration: none;
+    display: inline-block;
+    line-height: 24px;
+    vertical-align: middle;
+    padding-right: 15px;
+  }
+  
+  .logowanie .ramka1 .grafika{
+    font: 13px/27px Roboto,RobotoDraft,Arial,sans-serif;
+    white-space: nowrap;
+    font-family: arial,sans-serif;
+    color: #000000de;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 24px;
+    vertical-align: middle;
+    padding-right: 15px;
+  }
+
+  
+  
+  .logowanie .ramka1 .menu{
+    font: 13px/27px Roboto,RobotoDraft,Arial,sans-serif;
+    white-space: nowrap;
+    line-height: normal;
+    display: inline-block;
+    outline: none;
+    vertical-align: middle;
+    border-radius: 2px;
+    box-sizing: border-box;
+    height: 48px;
+    width: 48px;
+    padding: 12px;
+    background-position: -64px -29px;
+    opacity: 1;
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .logowanie .ramka1 .zaloguj{
+    font: 13px/27px Roboto,RobotoDraft,Arial,sans-serif;
+    white-space: nowrap;
+    display: inline-block;
+    outline: none;
+    font-family: Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: .25px;
+    line-height: 16px;
+    margin-right: 8px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: #1a73e8;
+    border: 1px solid transparent;
+    margin-left: 8px;
+    padding: 9px 15px;
+    min-width: 118.46px;
+    min-height: 36;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .Logo { 
+    grid-area: Logo; 
+    background: #fff;
+    display: flex;
+    height: 194.4px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+ 
+  .Logo .logo{
+    aspect-ratio: auto 273 / 93;
+    width: 273px; 
+    height: 93px; 
+  } 
+
+  .wyszukiwarka { 
+    margin-top: 4px;
+    grid-area: wyszukiwarka; 
+    background: #fff;
+    margin-top: 5px;
+    height: 160px;
+    margin-left: 450px;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .city{
+    margin-left: 100px;
+    
+    border-radius: 24px;
+  }
+
+  
+  /*
+  .wyszukiwarka .przyciski{
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    font-family: arial,sans-serif;
+    color: #222;
+    padding-top: 18px;
+    top: 53px;
+    z-index: 0;
+    
+}
+
+.wyszukiwarka .przyciski .przycisk1{
+ background-color: #f8f9fa;
+ border: 1px solid #f8f9fa;
+ border-radius: 4px;
+ color: #3c4043;
+ font-family: arial,sans-serif;
+ font-size: 14px;
+ margin: 11px 5px;
+ padding: 0 16.5px;
+ line-height: 27px;
+ height: 36px;
+ min-width: 54px;
+ text-align: center;
+ cursor: pointer;
+ user-select: none;
+}
+
+
+.wyszukiwarka .przyciski .przycisk2{
+ background-color: #f8f9fa;
+ border: 1px solid #f8f9fa;
+ border-radius: 4px;
+ color: #3c4043;
+ font-family: arial,sans-serif;
+ font-size: 14px;
+ margin: 11px 5px;
+ padding: 0 16.5px;
+ line-height: 27px;
+ height: 36px;
+ min-width: 54px;
+ text-align: center;
+ cursor: pointer;
+ user-select: none;
+}
+*/
+
+#googleSearch{
+  grid-area:wyszukiwarka;
+  padding-left: 20px;
+  height: 44px;
+  width: 561px;
+  margin: 0px;
+  border-radius: 30px;
+  justify-self: flex-start;
+  align-self: center;
+  background: #fff;
+  border: 1px solid #dfe1e5;
+  box-shadow: none;
+  border-radius: 24px;
+    
+}
+
+#lista{
+  width: 561px;
+  background: #fff;
+  border: 1px solid #dfe1e5;
+  box-shadow: none;
+  border-bottom-right-radius: 24px;
+  border-bottom-left-radius: 24px;
+}
+
+#listEl{
+  font-size: 15px;
+  font-family: sans-serif;
+  font-style: arial;
+  color: #212121;
+}
+
+#klawia-icon{
+  position: absolute;
+  top: 33px;
+  left: 574px;
+  width: 23px;
+  height: 15px;
+}
+
+#micro-icon{
+  position: absolute;
+  top: 31px;
+  left: 620px;
+  width: 14px;
+  height: 20px;
+}
+
+#lupa-icon{
+  position: absolute;
+  top: 32px;
+  left: 656px;
+  width: 24px;
+  height: 17.49px;
+}
+
+#lupa-icon1{
+ margin: 9px 9px 9px 14px;
+ width: 21px;
+ height: 15px;
+}
+
+.pustePole { 
+  grid-area: pustePole; 
+  background: #fff;
+  display: flex;
+  height: 243.4px;
+}
+
+.polska { 
+  grid-area: polska; 
+  background: #f2f2f2;
+  height: 48.6px;
+  border-bottom: 1px solid #dadce0;
+  grid-area: polska; 
+  padding: 15px 30px;
+  font-size: 15px;
+  font-family: sans-serif;
+  font-style: arial;
+  color: #0000008A;
+}
+  
+
+
+.napis1 { 
+  padding: 15px 30px;
+  margin-right: 20px;
+  background: #f2f2f2;
+  grid-area: napis1; 
+  height: 48px;
+  width: 438.23px;
+  font-size: 14px;
+  font-family: arial,sans-serif;
+  text-decoration: none;
+  justify-content: flex-end;
+  padding: 15px;
+  margin-right: 20px;
+  white-space: nowrap;
+  color: #70757a;
+}
+.napis1 .span{
+  margin-right: 20px;
+  break-after: 20px;
+}
+  
+.napis2 { 
+  grid-area: napis2; 
+  background: #f2f2f2;
+  display:flex;
+  font-size: 14px;
+  font-family: arial,sans-serif;
+  text-decoration: none;
+  padding: 15px;
+  white-space: nowrap;
+  color: #70757a;
+}
+  
+  .napis3 { 
+  grid-area: napis3; 
+  background: #f2f2f2;
+  height: 48px;
+  width: 281.69px;
+  font-size: 14px;
+  font-family: arial,sans-serif;
+  text-decoration: none;
+  padding: 15px;
+  color: #70757a;
+  justify-self: center;
+  text-align: center;
+}
+
+
+.napis2 .lisc{
+  width: 14px;
+  height: 12.25px;
+  margin: 0px 6px 0px 0px;
+  display: flex;
+}

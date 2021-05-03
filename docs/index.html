@@ -4,111 +4,130 @@
         <meta name="viewport" contetn="width=device-width, initial-scale-1.0">
         <meta charset="UTF-8">
         <html lang="pl-PL"></html>
-        <title>jakiś wynik google</title>
+        <title>Google</title>
         <link rel="icon" href="smallLogo.png">
-        <link rel="stylesheet" type="text/css" href="style1.css">
-        <link rel="stylesheet" type="text/css" href="text.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
         <script src="cities.js"></script>
     </head>
     <body>
-        <div id="navbar">
-            <a href = "#" id="logo"><img src="googleLogo.png" height="31px" width="92px"></a>
-        <div id="okno">
-            <img src="X.png" id="X-icon">
-            
-            <div id="app">  
-                <input type="text" id="googleSearch" v-model="googleSearch" v-bind:class="{results: googleSearch}" value height="45px">
-                <div class="city" v-for="city in filteredCities">
-                    {{ city.name }}
+        <div class="grid-container">
+            <div class="logowanie">
+                <div class="ramka1">
+                    <div class=gmail>
+                        Gmail
+                    </div> 
+                    <div class="grafika">
+                        Grafika
+                    </div>
+                    <div class="menu">
+                        <svg class="kropek" focusable="false" viewBox="0 0 24 24"><path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path></svg>
+                    </div>
+                    <div class="zaloguj">
+                        Zaloguj się
+                    </div>
                 </div>
-                {{ message }}
             </div>
- 
-            <img src="klawia.png" id="klawia-icon">
-            <img src="micro.png" id="micro-icon">
-            <img src="lupa.png" id="lupa-icon">
-        </div>
-            <a href = "#" id="menu1"><img src="menu.png" height="17px" width="17px"></a>
-            <a href = "#" id="przyciskZaloguj">Zaloguj się</a>
-        </div>
-        <div id="navbar2">
-           
-            <a href = "#" id="wszystko"><img src="lupa.png" height="14px" width="22px">Wszystko</a>
-            <a href = "#" id="wiadomosci"><img src="wiadomosci.png" height="14px" width="22px">Wiadomości</a>
-            <a href = "#" id="grafika"><img src="grafika.png" height="14px" width="22px">Grafika</a>
-            <a href = "#" id="video"><img src="video.png" height="14px" width="22px">Video</a>
-            <a href = "#" id="mapy"><img src="mapy.png" height="14px" width="20px">Mapy</a>
-            <a href = "#" id="wiecej"><img src="3dots.png" height="15px" width="17px">Więcej</a>
-            <a href = "#" id="ustawienia">Ustawienia</a>
-            <a href = "#" id="narzedzia">Narzędzia</a>
-        </div>
-        <div id="main">
-            <div id="Lista">
-                <p id="wyniki">Około 14 700 000 wyników (0,36s)</p>
 
-                <ul id="wyszukaneRzeczy" style="list-style-type:none">
-                    <li>
-                        Sprawdzanie wyników wyszukiwania podróży przez Gmaila ...
-                        <p id="pod">
-                            Zobacz wyniki z innego konta Google. Uwaga: aby wykonać te czynności, muszisz zalogować
-                        </p>
-                        <p id="pod">sie na konto Google. Na telefonie lub tablecie z Androidem otwórz ...</p>
-                    </li>
-
-                    <li>
-                        Zawężanie wyników wyszukiwania - Wyszukiwarka Google ...
-                        <p id="pod">
-                            Możesz zwiększyć precyzję wyników wyszukiwania, używając w zapytaniu słów i symboli
-                        </p>
-                        <p id="pod">Wyszukiwarka Google zwykle ignoruje znaki interpunkcyjne, które nie ...</p>
-                    </li>
-
-                    <li>
-                        Rodzaje wyników wyszukiwania Google - ponad 20 ...
-                    </li>
-
-                    <li>
-                        14 sposobów wyszukiwania w Google, których 95% z Was nie ...
-                    </li>
-
-                    <li>
-                        Wyniki wyszukiwań Google - skąd takie rozbieżności?
-                    </li>
-                </ul>
+            <div class="Logo">
+                <img src="logo.png" class="logo" alt="" data-atf="1">
             </div>
-        </div>
-        <div id="footer1">
-            <p id="polska">Polska</p>
-        </div>
-        <div id="footer2">
-            <a href = "#" id="pomoc">Pomoc</a>
-            <a href = "#" id="przeslijOpinie">Prześlij opinię</a>
-            <a href = "#" id="prywatnosc">Prywatność</a>
-            <a href = "#" id="warunki">Warunki</a>
+
+            <div class="wyszukiwarka">
+                <div id="okno">
+
+                    <div id="app">  
+                        <div class="autocomplete">
+                            <input type="text" id="googleSearch" @input="filterCities" autocomplete="off" v-model="googleSearch" v-bind:class="{results: googleSearch}" value height="45px">
+                            
+                            <div v-if='filteredCities' class="City" :higlight="true">
+                                <ul id="lista">
+                                    <li id="listEl" v-for="city in filteredCities" @click="setCity(city)"> <img src="lupa.png" id="lupa-icon1" :higlight="true"> {{ city.name }}</li>
+                                </ul>
+                            </div>
+
+                            <!--
+                            <div v-if='filteredCities' class="city" v-for="city in filteredCities" @click="setCity(filteredCity)">
+                               {{ city.name }}
+                            </div>
+                            -->
+                        </div>
+                    </div>
+
+                    <img src="klawiatura.png" id="klawia-icon">
+                    <img src="mikrofon.png" id="micro-icon">
+                    <img src="lupa.png" id="lupa-icon">
+                </div>
+                <!--
+                <div class="przyciski">
+                    <div class = "przycisk1">Szukaj w Google</div>
+                    <div class = "przycisk2">Szczęśliwy traf</div>
+                </div>
+                 -->
+            </div>
+
+            <div class="pustePole"></div>
+
+            <div class="polska">
+                <p>Polska</p>
+            </div>
+         
+            <div class="napis1">
+                <span>O nas</span>
+                <span>Reklamuj się</span>
+                <span>Dla firm</span>
+                <span>Jak działa wyszukiwarka</span>
+            </div>
+
+            <div class="napis2">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAMAAAAiV0Z6AAAAPFBMVEVLoEN0wU6CzFKCzFKCzFKCzFKCzFJSo0MSczNDmkCCzFJPoUMTczNdr0gmgziCzFITczMTczMTczMTczPh00jOAAAAFHRSTlPF/+bIsms8Ad///hX+//5/tXw7aMEAx10AAACaSURBVHgBbc4HDoRQCATQ33tbvf9dF9QxaCT9UQaltLHOh/golXKhMs5Xqa0xU1lyoa2fXFyQOsDG38qsLy4TaV+sFislovyhPzLJJrBu6eQOtpW0LjbJkzTuTDLRVNKa3uxJI+VdiRqXSeu6GW+Qxi29eLIi8H7EsYrT42BD+mQtNO5JMjRuC4lSY8V4hsLX0egGijvUSEP9AbylEsOkeCgWAAAAAElFTkSuQmCC" class="lisc" alt="" data-atf="1">
+                Neutralność węglowa od 2007 roku
+            </div>
+
+            <div class="napis3">
+                <span>Prywatność</span>
+                <span>Warunki</span>
+                <span>Ustawienia</span>
+            </div>
+
+
         </div>
 
         <script>
             new Vue({
                 el: '#app',
-                data: {
+                data: function() {
+                    return{
                     cities: window.cities,
-                    googleSearch:"",
+                    googleSearch:'',
+                    filteredCities:[],
+                    }
                 },
-                computed: {
+                /*computed: {
                     filteredCities() {
                         return this.cities
                             .filter((city) => {
-                                return city.name.toLowerCase().includes(this.googleSearch);
+                                return city.name.toLowerCase().startsWith(this.googleSearch.toLowerCase());
                         })
                         .slice(0, 10);    
+                    }
+                },*/
+            
+                methods:{
+                    filterCities(){
+                      this.filteredCities = this.cities.filter((city) => {
+                                return city.name.toLowerCase().startsWith(this.googleSearch.toLowerCase()); 
+                            })
+                        .slice(0, 10);
+                    },
+                
+                    setCity(city){  
+                        this.googleSearch = city;
+                        this.filteredCities= [];
                     }
                 }
             })
         </script>
     </body>
 </html>
-
-
-
-

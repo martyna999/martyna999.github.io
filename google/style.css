@@ -24,7 +24,7 @@
   .grid-container {
     display: grid;
     grid-template-columns: 438.23px 1fr 301.69px;
-    grid-template-rows: 60px 194.4px 160px 242px 48.6px 48px;
+    grid-template-rows: 60px 194.4px 400px 2px 48.6px 48px;
     gap: 0px 0px;
     grid-template-areas:
       "logowanie logowanie logowanie"
@@ -145,23 +145,18 @@
     height: 93px; 
   } 
 
-  .wyszukiwarka { 
-    margin-top: 4px;
-    grid-area: wyszukiwarka; 
-    background: #fff;
-    height: 160px;
-    display:flex;
-    flex-direction: column;
-    padding: 20px;
-    justify-content: flex-end;
-    align-items: center;
-  }
+.wyszukiwarka { 
+  margin-top: 4px;
+  grid-area: wyszukiwarka; 
+  background: #fff;
+  height: 160px;
+  display:flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+}
 
-  #googleSearch{
-    position: relative;
-  }
-
-#wyszukaj{
+#googleSearch{
   grid-area: wyszukiwarka;
   padding-left: 44px;
   position:relative;
@@ -171,7 +166,7 @@
   background: #fff;
   border: 1px solid #dfe1e5;
   box-shadow: none;
-  height: 46px;
+  height: 42px;
   width: 582px;
   border-radius: 24px;
 }
@@ -180,26 +175,49 @@
   position: absolute;
   width: 18px;
   height: 17px;
-  top: 15.5px;
-  left: 15px;
+  top: 292px;
+  left: 480px;
 }
+
+#lupa-icon1{
+  margin: 9px 9px 9px 14px;
+  width: 17px;
+  height: 15px;
+ }
 
 #klawiatura{
   position: absolute;
   width: 42px;
   height: 30px;
-  top: 8px;
-  left: 490px;
+  top: 285px;
+  left: 965px;
 }
 
 #mikrofon{
   position: absolute;
   width: 13px;
   height: 20px;
-  top: 12.5px;
-  left: 545px;
+  top: 290px;
+  left: 1015px;
 }
 
+#lista{
+  width: 582px;
+  background: #fff;
+  border: 1px solid #dfe1e5;
+  box-shadow: none;
+  border-bottom-right-radius: 24px;
+  border-bottom-left-radius: 24px;
+}
+
+#listEl{
+  font-size: 15px;
+  font-family: sans-serif;
+  font-style: arial;
+  color: #212121;
+}
+
+/*
 .wyszukiwarka .przyciski{
   display: flex;
   justify-content: center;
@@ -245,6 +263,7 @@
  cursor: pointer;
  user-select: none;
 }
+*/
 
 
 .pustePole { 
@@ -354,3 +373,10 @@
   display: flex;
   margin-left: 196px;
 }
+
+.city{
+  margin-left: 100px;
+  
+  border-radius: 24px;
+}
+

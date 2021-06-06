@@ -2,11 +2,14 @@
 <html>
     <head>
         <meta name="viewport" contetn="width=device-width, initial-scale-1.0">
-<meta charset="UTF-8">
-<html lang="pl-PL"></html>
-<title>Google</title>
-<link rel="icon" href="smallLogo.png">
-<link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="UTF-8">
+        <html lang="pl-PL"></html>
+        <title>Google</title>
+        <link rel="icon" href="smallLogo.png">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <script src="cities.js"></script>
     </head>
     <body>
         <div class="grid-container">
@@ -27,23 +30,45 @@
                 </div>
             </div>
 
+            
             <div class="Logo">
+                <a href="https://martyna999.github.io/google1/">results</a>
                 <img src="logo.png" class="logo" alt="" data-atf="1">
             </div>
 
             <div class="wyszukiwarka">
+                
+                <div id="okno">
+                    <div id="app">  
+                        <div class="autocomplete">
+                            <input type="text" id="googleSearch" @input="filterCities" autocomplete="off" v-model="googleSearch" v-bind:class="{results: googleSearch}" value height="44px">
+                            
+                            <div v-if='filteredCities' class="City" :higlight="true">
+                                <ul id="lista">
+                                    <li id="listEl" v-for="city in filteredCities" @click="setCity(city)"> <img src="lupa.png" id="lupa-icon1" :higlight="true"> {{ city.name }}</li>
+                                </ul>
+                            </div>
+                            <!--
+                            <div v-if='filteredCities' class="city" v-for="city in filteredCities" @click="setCity(filteredCity)">
+                               {{ city.name }}
+                            </div>
+                            -->
+                        </div>
+                    </div>
+                </div>
 
-                <div id="googleSearch">
-                    <input type="text" class="wyszukaj" id="wyszukaj" height="48px">
-                    <img src="lupa.png" id="lupa"> 
+                <img src="lupa.png" id="lupa"> 
                     <img src="mikrofon.png" id="mikrofon">
                     <img src="klawiatura.png" id="klawiatura">
-                </div>
-            
+                <!--
                 <div class="przyciski">
                     <div class = "przycisk1">Szukaj w Google</div>
                     <div class = "przycisk2">Szczęśliwy traf</div>
-                    <a href="https://martyna999.github.io/google1/">results</a>
+                </div>
+                 -->
+                <div class="przyciski">
+                    <!-- <div class = "przycisk1">Szukaj w Google</div>-->
+                    <!--<div class = "przycisk2">Szczęśliwy traf</div>-->
                 </div>
             </div>
 
@@ -73,6 +98,44 @@
 
 
         </div>
+
+
+        <script>
+            new Vue({
+                el: '#app',
+                data: function() {
+                    return{
+                    cities: window.cities,
+                    googleSearch:'',
+                    filteredCities:[],
+                    }
+                },
+                /*computed: {
+                    filteredCities() {
+                        return this.cities
+                            .filter((city) => {
+                                return city.name.toLowerCase().startsWith(this.googleSearch.toLowerCase());
+                        })
+                        .slice(0, 10);    
+                    }
+                },*/
+            
+                methods:{
+                    filterCities(){
+                      this.filteredCities = this.cities.filter((city) => {
+                                return city.name.toLowerCase().startsWith(this.googleSearch.toLowerCase()); 
+                            })
+                        .slice(0, 10);
+                    },
+                
+                    setCity(city){  
+                        this.googleSearch = city;
+                        this.filteredCities= [];
+                    }
+                }
+            })
+        </script>
+
 
     </body>
 </html>

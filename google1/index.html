@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" contetn="width=device-width, initial-scale-1.0">
+        <meta charset="UTF-8">
+        <html lang="pl-PL"></html>
+        <title>jakiś wynik google</title>
+        <link rel="icon" href="smallLogo.png">
+        <link rel="stylesheet" type="text/css" href="style1.css">
+        <link rel="stylesheet" type="text/css" href="text.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <script src="cities.js"></script>
+    </head>
+    <body>
+        <div id="navbar">
+            <a href = "#" id="logo"><img src="googleLogo.png" height="31px" width="92px"></a>
+        <div id="okno">
+            <img src="X.png" id="X-icon">
+            <div id="app">  
+                <input type="text" id="googleSearch" v-model="googleSearch" v-bind:class="{results: googleSearch}" value height="45px">
+                <div class="city" v-for="city in filteredCities">
+                    {{ city.name }}
+                </div>
+                {{ message }}
+            </div>
+ 
+            <img src="klawia.png" id="klawia-icon">
+            <img src="micro.png" id="micro-icon">
+            <img src="lupa.png" id="lupa-icon">
+        </div>
+            <a href = "#" id="menu1"><img src="menu.png" height="17px" width="17px"></a>
+            <a href = "#" id="przyciskZaloguj">Zaloguj się</a>
+        </div>
+        <div id="navbar2">
+           
+            <a href = "#" id="wszystko"><img src="lupa.png" height="14px" width="22px">Wszystko</a>
+            <a href = "#" id="wiadomosci"><img src="wiadomosci.png" height="14px" width="22px">Wiadomości</a>
+            <a href = "#" id="grafika"><img src="grafika.png" height="14px" width="22px">Grafika</a>
+            <a href = "#" id="video"><img src="video.png" height="14px" width="22px">Video</a>
+            <a href = "#" id="mapy"><img src="mapy.png" height="14px" width="20px">Mapy</a>
+            <a href = "#" id="wiecej"><img src="3dots.png" height="15px" width="17px">Więcej</a>
+            <a href = "#" id="ustawienia">Ustawienia</a>
+            <a href = "#" id="narzedzia">Narzędzia</a>
+        </div>
+        <div id="main">
+            <div id="Lista">
+                <p id="wyniki">Około 14 700 000 wyników (0,36s)</p>
+
+                <ul id="wyszukaneRzeczy" style="list-style-type:none">
+                    <li>
+                        Sprawdzanie wyników wyszukiwania podróży przez Gmaila ...
+                        <p id="pod">
+                            Zobacz wyniki z innego konta Google. Uwaga: aby wykonać te czynności, muszisz zalogować
+                        </p>
+                        <p id="pod">sie na konto Google. Na telefonie lub tablecie z Androidem otwórz ...</p>
+                    </li>
+
+                    <li>
+                        Zawężanie wyników wyszukiwania - Wyszukiwarka Google ...
+                        <p id="pod">
+                            Możesz zwiększyć precyzję wyników wyszukiwania, używając w zapytaniu słów i symboli
+                        </p>
+                        <p id="pod">Wyszukiwarka Google zwykle ignoruje znaki interpunkcyjne, które nie ...</p>
+                    </li>
+
+                    <li>
+                        Rodzaje wyników wyszukiwania Google - ponad 20 ...
+                    </li>
+
+                    <li>
+                        14 sposobów wyszukiwania w Google, których 95% z Was nie ...
+                    </li>
+
+                    <li>
+                        Wyniki wyszukiwań Google - skąd takie rozbieżności?
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="footer1">
+            <p id="polska">Polska</p>
+        </div>
+        <div id="footer2">
+            <a href = "#" id="pomoc">Pomoc</a>
+            <a href = "#" id="przeslijOpinie">Prześlij opinię</a>
+            <a href = "#" id="prywatnosc">Prywatność</a>
+            <a href = "#" id="warunki">Warunki</a>
+        </div>
+
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    cities: window.cities,
+                    googleSearch:" ",
+                },
+                computed: {
+                    filteredCities() {
+                        return this.cities
+                            .filter((city) => {
+                                return city.name.toLowerCase().includes(this.googleSearch);
+                        })
+                        .slice(0, 10);    
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var app = new Vue({
+    el: '#app',
+    data: {
+      googleSearch: "",
+      cities: window.cities,
+      searchedInput:'',
+      filteredCities:"",
+      filteredCities2: true,
+      el_focus: false,
+      change: false,
+      mark: -1,
+    },
+
+    watch: {
+        mark() {
+            this.filteredCities2 = false;
+            this.googleSearch = this.filteredCities[this.mark].name;
+        },
+
+        googleSearch() {
+            this.create(this.filteredCities2);
+            this.filteredCities2 = true;
+            console.log(this.filteredCities); 
+
+            if (this.mark == -1)
+            {
+                this.searchedInput = this.googleSearch;      
+            }
+        }
+    },
+
+    methods: {
+        down(){
+            if (this.mark < this.filteredCities.length-1)
+            {
+                this.mark += 1; 
+            }
+            else if (this.mark == this.filteredCities.length-1)
+            {
+                this.mark = 0; 
+            }
+        },
+        
+        up() {
+            if (this.mark > 0)
+            {
+                this.mark -= 1; 
+            }
+                else if (this.mark == 0)
+                {
+                    this.mark = this.filteredCities.length-1;
+                }
+        },
+
+        enter() {
+            this.filteredCities = true;
+            this.change = true;
+            this.mark = -1;
+            this.el_focus = false;
+        },
+
+        chosen(i) {
+            this.googleSearch = this.filteredCities[i].name;
+            this.enter();
+        },
+             
+        active() {
+            if (this.googleSearch.length == 0)
+            {
+                this.change = false;
+            }
+            
+            return this.change;
+        },
+            
+        create(value) {
+            if (value)
+            {
+                let result = this.cities.filter(city => city.name.includes(this.googleSearch));
+                
+                if (result.length > 10)
+                {
+                    this.filteredCities = result.slice(0, 10);
+                }
+
+                else 
+                {
+                    this.filteredCities = result;
+                }
+
+                this.mark = -1;
+            }   
+        },
+             
+        bold_letter(city) {
+            let re = new RegExp(this.searchedInput, "gi");
+            let bolden = "<b>" + city.name.replace(re, match =>
+                {
+                    return "<span class='without_bold'>" +  match + "</span>";
+                }) + "</b>";
+
+            console.log(bolden);
+            return bolden;
+        }      
+    }
+  });
